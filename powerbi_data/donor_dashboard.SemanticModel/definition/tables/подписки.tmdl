@@ -1,20 +1,6 @@
 table подписки
 	lineageTag: 8ffb835b-db69-4a95-ba8e-f438e3e676ab
 
-	measure 'Количество сбор плюс Количество сбор' =
-			
-			COUNTA('подписки'[сбор]) + COUNTA('подписки'[сбор])
-		formatString: 0
-		lineageTag: 17bbe4e4-d2c5-40c3-8364-f8d105961473
-
-		extendedProperty MeasureTemplate =
-				{
-				  "version": 0,
-				  "daxTemplateName": "MathematicalAddition"
-				}
-
-		changedProperty = FormatString
-
 	measure Донаторов = DISTINCTCOUNT('подписки'[ID плательщика])
 		formatString: #,0
 		lineageTag: bff52684-adc6-4d93-9805-76829c35745c
